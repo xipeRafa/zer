@@ -1,0 +1,2 @@
+import'../node_modules/core-js/modules/es.promise.js';const url="http://localhost:50808/clientes";const obtenerClientes=async()=>{try{const resultado=await fetch(url),clientes=await resultado.json();return clientes}catch(error){console.log(error);}};const eliminarCliente=async id=>{try{await fetch(`${url}/${id}`,{method:"DELETE"});}catch(error){console.log(error);}};
+export{eliminarCliente,obtenerClientes};
